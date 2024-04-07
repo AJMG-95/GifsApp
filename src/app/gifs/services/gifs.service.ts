@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Gif, SearchResponse } from '../interfaces/gifs.interfaces';
 
 
 /* const GIPHY_API_KEY = 'qWmOMfpV4xJbBbm6JSdlNNNZSrJUUjP9'; */
@@ -9,8 +10,10 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class GifsService {
 
-  /* Almacena todos los tags que busca el usuario */
-  private _tagsHistory: string[] = [];
+
+  public gifsList: Gif[] = [];
+
+  private _tagsHistory: string[] = []; /* Almacena todos los tags que busca el usuario */
   private apiKey: string = ''; /* ApiKey from https://developers.giphy.com/dashboard/ */
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
@@ -45,8 +48,8 @@ export class GifsService {
     const url: string = `${this.serviceUrl}/search`
 
 
-    this.http.get(url, { params: params }).subscribe(resp => {
-      console.log('resp', resp);
+    this.http.get<SearchResponse>(url, { params: params }).subscribe(resp => {
+      this.gifsList = resp.data;
     })
   }
   /*
