@@ -33,8 +33,14 @@ export class GifsService {
 
     this._tagsHistory.unshift(tag); /* se inserta en la posicion 0 de _tagsHistory */
     this._tagsHistory = this._tagsHistory.splice(0, 10);  /* Limita la longitud del hitorial a 10 */
+
+    this.saveLocalStorage() /* Se guardar el historial en el localStorage cada vez que se modufuca el _tagsHistory */
   }
 
+
+  private saveLocalStorage(): void {
+    localStorage.setItem('history', JSON.stringify(this._tagsHistory));
+  }
 
   //*Hay varias formas de realizar la peticion a la API:
   searchTag(tag: string): void {
