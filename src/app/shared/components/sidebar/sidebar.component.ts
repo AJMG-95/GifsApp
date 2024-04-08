@@ -10,8 +10,12 @@ export class SidebarComponent {
   constructor(private gifsService: GifsService) { }
 
   /* Como la propiedad _tagsHistory es privada se necesita un getter para obtener su valor */
-  get tags() {
+  get tags(): string[] {
     return this.gifsService.tagsHistory;
+  }
+
+  searchTag(tag: string): void {
+    this.gifsService.searchTag(tag);
   }
 
 
