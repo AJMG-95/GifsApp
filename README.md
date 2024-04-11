@@ -16,6 +16,7 @@ GifsApp is a modern web application built with Angular CLI, a web application de
 - Giphy API (https://developers.giphy.com/): A public API that provides access to a large collection of GIFs on various topics and categories.
 - TypeScript: A typed superset of JavaScript that compiles to plain JavaScript and facilitates the development of robust and scalable applications.
 - HTML5 and CSS3: The standard languages for web content creation, used for the structure and design of the application's user interface.
+- Bootstrap (https://getbootstrap.com/): A popular CSS framework for building responsive and mobile-first websites, providing pre-designed components and utilities to streamline web development.
 - Git: A distributed version control system used for tracking changes in the source code and team collaboration.
 - GitHub: A code hosting platform that provides version control and collaboration tools for developers.
 - SVG Loaders (https://samherbert.net/svg-loaders/): An SVG loader library that provides a variety of customizable loading animations to enhance the user experience during content loading.
@@ -39,6 +40,7 @@ GifsApp es una aplicación web moderna construida con Angular CLI, una plataform
 - Giphy API (https://developers.giphy.com/): Una API pública que proporciona acceso a una gran colección de GIFs de diferentes temas y categorías.
 - TypeScript: Un superconjunto tipado de JavaScript que compila a JavaScript puro y facilita el desarrollo de aplicaciones robustas y escalables.
 - HTML5 y CSS3: Los lenguajes estándar para la creación de contenido web, utilizados para la estructura y el diseño de la interfaz de usuario de la aplicación.
+- Bootstrap (https://getbootstrap.com/): Un popular framework CSS para construir sitios web receptivos y optimizados para dispositivos móviles, que proporciona componentes pre-diseñados y utilidades para agilizar el desarrollo web.
 - Git: Un sistema de control de versiones distribuido utilizado para el seguimiento de cambios en el código fuente y la colaboración en equipo.
 - GitHub: Una plataforma de alojamiento de código que proporciona control de versiones y herramientas de colaboración para desarrolladores.
 - SVG Loaders (https://samherbert.net/svg-loaders/): Una biblioteca de carga de SVG que proporciona una variedad de animaciones de carga personalizables para mejorar la experiencia del usuario durante la carga de contenido.
