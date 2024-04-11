@@ -17,7 +17,9 @@ export class GifsService {
   private apiKey: string = 'qWmOMfpV4xJbBbm6JSdlNNNZSrJUUjP9'; /* ApiKey from https://developers.giphy.com/dashboard/ */
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.loadLocalStorage()
+  }
 
   get tagsHistory(): string[] {
     return [...this._tagsHistory]; /* Se usa el operador [...] para copiar los tagsHistory */
@@ -40,6 +42,10 @@ export class GifsService {
 
   private saveLocalStorage(): void {
     localStorage.setItem('history', JSON.stringify(this._tagsHistory));
+  }
+  private loadLocalStorage(): void {
+    if (!localStorage.getItem('history')) return
+    this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
   }
 
   //*Hay varias formas de realizar la peticion a la API:
