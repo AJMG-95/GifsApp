@@ -46,6 +46,10 @@ export class GifsService {
   private loadLocalStorage(): void {
     if (!localStorage.getItem('history')) return
     this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
+
+    if (this._tagsHistory.length === 0) return
+
+    this.searchTag(this._tagsHistory[0]);
   }
 
   //*Hay varias formas de realizar la peticion a la API:
