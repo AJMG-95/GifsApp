@@ -14,7 +14,7 @@ export class GifsService {
   public gifsList: Gif[] = [];
 
   private _tagsHistory: string[] = []; /* Almacena todos los tags que busca el usuario */
-  private apiKey: string = ''; /* ApiKey from https://developers.giphy.com/dashboard/ */
+  private apiKey: string = 'qWmOMfpV4xJbBbm6JSdlNNNZSrJUUjP9'; /* ApiKey from https://developers.giphy.com/dashboard/ */
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
   constructor(private http: HttpClient) { }
