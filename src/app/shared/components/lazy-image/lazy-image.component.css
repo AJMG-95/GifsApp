@@ -1,0 +1,11 @@
+.image-container {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 18vh;
+  width: 100%;
+  margin-top: 10px;
+}
